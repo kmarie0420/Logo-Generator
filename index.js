@@ -1,18 +1,20 @@
 // Inquirer import
-var inquirer = require("inquirer");
+import inquirer from "inquirer";
 
 // File system module import
-const fs = require("fs");
+import fs from "fs";
 
 // Importing classes from ./lib/shapes directory
-const { Circle, Sqaure, Triangle } = require("./lib/shapes");
+import Circle from "./lib/circle.js"
+import Square from "./lib/square.js"
+import Triangle from "./lib/triangle.js"
+import SVG from "./lib/svg.js";
 
 // Function writes the SVG file using user answers from inquirer prompts
 
 // This function utilizes inquirer to prompt the user to answer questions in terminal for user input
 function promptUser() {
-  inquirer
-    .prompt([
+  inquirer.prompt([
       {
         type: "input",
         message: "Choose your 3 character text for logo",
@@ -26,7 +28,7 @@ function promptUser() {
       {
         type: "list",
         message: "What shape would you like the logo to be?",
-        choices: ["Triangle", "Square", "Circle"],
+        choices: ["Circle",  "Square", "Triangle"],
         name: "shape",
       },
       {
@@ -41,9 +43,22 @@ function promptUser() {
         console.log("Must enter a value of no more than 3 characters");
         promptUser();
       } else {
-        
+        if(answers.shape === "Circle") {
+            var shape = new Circle()
+        } else if(answers.shape === "Square") {
+            var shape = new Square()
+        } else if(answers.shape === "Triangle") {
+            var shape = new Triangle()
+        }
+        shape.setColor(answers.shapeBackgroundColor)
+
+        const svg = new SVG();
+        svg.setText(answers.text, answers.textColor);
+        svg.setShape(shape)
+        console.log(svg)
+
         // Calling write file function to generate SVG file
-        writeToFile("logo.svg", answers);
+       // writeToFile("logo.svg", answers);
       }
     });
 }
