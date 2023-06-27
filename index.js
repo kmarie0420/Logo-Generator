@@ -2,7 +2,7 @@
 import inquirer from "inquirer";
 
 // File system module import
-import fs from "fs";
+import { writeFile } from "fs/promises";
 
 // Importing classes from ./lib/shapes directory
 import Circle from "./lib/circle.js"
@@ -55,12 +55,11 @@ function promptUser() {
         const svg = new SVG();
         svg.setText(answers.text, answers.textColor);
         svg.setShape(shape)
-        console.log(svg)
-
-        // Calling write file function to generate SVG file
-       // writeToFile("logo.svg", answers);
+        return writeFile("logo.svg", svg.render());
       }
-    });
+    }).then(() => {
+        console.log("generated logo.svg")
+    })
 }
 
 // Calling promptUser function so inquirer prompts fire off when application is ran
