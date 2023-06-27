@@ -55,10 +55,10 @@ function promptUser() {
         const svg = new SVG();
         svg.setText(answers.text, answers.textColor);
         svg.setShape(shape)
-        return writeFile("logo.svg", svg.render());
+        return writeFile(`./eg/${answers.shape.toLowerCase()}.svg`, svg.render());
       }
     }).then(() => {
-        console.log("generated logo.svg")
+        console.log("generated your svg")
     })
 }
 
