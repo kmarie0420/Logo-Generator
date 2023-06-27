@@ -1,0 +1,19 @@
+{
+  "name": "logo-generator",
+  "version": "1.0.0",
+  "description": "Logo Generator - Challenge 10",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmarie0420/Logo-Generator.git"
+  },
+  "author": "Kalynn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmarie0420/Logo-Generator/issues"
+  },
+  "homepage": "https://github.com/kmarie0420/Logo-Generator#readme"
+}
