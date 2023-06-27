@@ -30,13 +30,25 @@ A Node.js application that takes in user input to generate a logo, using only th
 
 ## Installation
 
-First git clone this repo.
+First git clone this repo: `git clone git@github.com:kmarie0420/Logo-Generator.git` 
 Then run npm i at the root of this project in your local directory.
 Additionally you will run npm i inquirer and npm i jest (for testing).
 
   * Uses the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4).
 
   * Uses the [Jest package](https://www.npmjs.com/package/jest) for a suite of unit tests.
+
+## Usgae Information
+
+To run this application, use the command line to navigate to the directory of the application, install all dependencies (npm i), then type the command node index.js. You will then be taken through a series of questions. Once all questions have been answered properly, a message will display to the command line telling you, your logo has been generated. Find your new logo in the newly generated SVG file.
+
+For unit testing instructions, navigate to the Test Instructions section.
+
+## Testing
+
+To run unit testing, open the terminal, and use the command npm test.
+
+As of now there is one test suite with three tests. The test suite is checking for a render() method to return a string for the corresponding SVG file with the given shape color.
 
 ## Contributors
 
@@ -51,6 +63,9 @@ Kalynn Powell
 https://github.com/kmarie0420/Logo-Generator
 
 ## Walk-Through-Video
+
+## Questions
+If you have any questions or concerns, please email `kpowell0420@gmail.com` or https://github.com/kmarie0420 .  
 
 
 
