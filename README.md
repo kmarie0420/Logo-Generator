@@ -1,6 +1,5 @@
 # Logo-Generator
 Logo Generator
-
 ### User Story
 
 AS a freelance web developer
@@ -42,6 +41,9 @@ Additionally you will run npm i inquirer and npm i jest (for testing).
 
 To run this application, use the command line to navigate to the directory of the application, install all dependencies (npm i), then type the command node index.js. You will then be taken through a series of questions. Once all questions have been answered properly, a message will display to the command line telling you, your logo has been generated. Find your new logo in the newly generated SVG file.
 
+![Alt text](2023-06-27.png)
+![Alt text](<2023-06-27 (3).png>)
+
 For unit testing instructions, navigate to the Test Instructions section.
 
 ## Testing
@@ -49,6 +51,8 @@ For unit testing instructions, navigate to the Test Instructions section.
 To run unit testing, open the terminal, and use the command npm test.
 
 As of now there is one test suite with three tests. The test suite is checking for a render() method to return a string for the corresponding SVG file with the given shape color.
+
+![Alt text](<2023-06-27 (2).png>)
 
 ## Contributors
 
@@ -63,6 +67,8 @@ Kalynn Powell
 https://github.com/kmarie0420/Logo-Generator
 
 ## Walk-Through-Video
+
+https://drive.google.com/file/d/1wbupOkJCMasALnjA31bkcn1HIHsb3Iio/view?usp=sharing
 
 ## Questions
 If you have any questions or concerns, please email `kpowell0420@gmail.com` or https://github.com/kmarie0420 .  
