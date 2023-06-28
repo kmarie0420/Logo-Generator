@@ -10,8 +10,6 @@ import Square from "./lib/square.js"
 import Triangle from "./lib/triangle.js"
 import SVG from "./lib/svg.js";
 
-// Function writes the SVG file using user answers from inquirer prompts
-
 // This function utilizes inquirer to prompt the user to answer questions in terminal for user input
 function promptUser() {
   inquirer.prompt([
@@ -38,7 +36,7 @@ function promptUser() {
       },
     ])
     .then((answers) => {
-      // Error for text prompt (user must enter up to 3 characters)
+      // returns logo for user input 
       if (answers.text.length > 3) {
         console.log("Must enter a value of no more than 3 characters");
         promptUser();
@@ -52,11 +50,14 @@ function promptUser() {
         }
         shape.setColor(answers.shapeBackgroundColor)
 
+        // creates a svg file
         const svg = new SVG();
         svg.setText(answers.text, answers.textColor);
         svg.setShape(shape)
         return writeFile(`./eg/${answers.shape.toLowerCase()}.svg`, svg.render());
       }
+
+      // interactive command line
     }).then(() => {
         console.log("generated your svg")
     })
